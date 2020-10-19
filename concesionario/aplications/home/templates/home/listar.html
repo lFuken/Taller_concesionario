@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <h1 class="text-center">Aqui esta mi lista de clientes de la BD</h1>
+    <div style="text-align:center;">
+        <table style="margin: 0 auto;" class="table table-striped">
+            <thead class="table table-dark">
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Poblacion</th>
+                <th>Codigo postal</th>
+                <th>Provincia</th>
+                <th>Telefono</th>
+                <th>Fecha de nacimiento</th>
+            </thead>
+
+            {% for c in cliente %}
+            <tr>
+                <td>
+                    <p>
+                        {{c.nombre_cliente}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{c.apellido_cliente}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{c.direccion_cliente}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{c.poblacion}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{c.codigo_postal}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{c.provincia}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{c.telefono}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{c.fecha_nacimiento}}
+                    </p>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
