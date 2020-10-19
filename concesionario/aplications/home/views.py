@@ -5,7 +5,7 @@ from aplications.coches_vendidos.models import Coche
 from aplications.revisiones.models import Revision
 
 # Create your views here.
-from django.views.generic import CreateView, ListView, UpdateView
+from django.views.generic import CreateView, ListView, UpdateView, TemplateView
 
 class ClientesCreateView(CreateView):
     template_name = "home/home.html"
@@ -32,6 +32,9 @@ class ListarRevicionListView(ListView):
     fields=('__all__')
     template_name = "home/lista_reviciones.html"
     context_object_name = 'revicion'  
+
+class successView(TemplateView):
+    template_name = "home/success.html"
 
 class ClienteUpdateView(UpdateView):
     template_name = "home/actualizar_cliente.html"

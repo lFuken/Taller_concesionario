@@ -10,5 +10,6 @@ urlpatterns = [
     path('listar/', views.ListarClienteListView.as_view()),
     path('lista_cliente/', views.ListarCocheListView.as_view()),
     path('lista_reviciones/', views.ListarRevicionListView.as_view()),
-    path('actualizar_cliente/', views.ClienteUpdateView.as_view(), name='Cli_up'),
+    path('success/', views.successView.as_view(), name='Cli_up'),
+    path('actualizar_cliente/<pk>/', views.ClienteUpdateView.as_view(),),
 ]
